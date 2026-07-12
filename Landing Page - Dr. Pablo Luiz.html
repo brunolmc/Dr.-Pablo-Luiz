@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Pablo Luiz — Tratamento da obesidade e do emagrecimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#23211C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F5F1EA"/>
+    <path d="M470 560 C 640 480 560 360 720 300" fill="none" stroke="#23211C" stroke-width="26" stroke-linecap="round"/>
+    <circle cx="470" cy="560" r="30" fill="#23211C"/>
+    <circle cx="726" cy="298" r="38" fill="#83907F"/>
+    <text x="600" y="700" font-family="Georgia,serif" font-size="58" fill="#23211C" text-anchor="middle">Dr. Pablo Luiz</text>
+  </svg>
+</template>
+<style>
+  :root{
+    --tinta:#23211C;
+    --grafite:#6B665C;
+    --salvia:#83907F;
+    --salvia-d:#6E7B6B;
+    --pedra:#C3B8A6;
+    --areia:#E7DECF;
+    --linho:#F5F1EA;
+    --line:#DED5C6;
+    --wa:#25D366;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linho);color:var(--tinta);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:var(--salvia-d);text-decoration:none;}
+  a:hover{color:var(--tinta);}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;color:var(--tinta);margin:0;line-height:1.08;letter-spacing:-.01em;}
+  p{margin:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+  .eyebrow{font-family:'Jost';font-weight:400;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--salvia-d);}
+  .lead{font-size:19px;line-height:1.7;color:var(--grafite);font-weight:300;}
+
+  /* mark */
+  .mk{color:var(--tinta);}
+  .on-dark .mk{color:var(--linho);}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(245,241,234,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .bn{font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:var(--tinta);}
+  .brand .bn small{display:block;font-family:'Jost';font-weight:400;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--salvia-d);margin-top:1px;}
+  .navlinks{display:flex;gap:34px;}
+  .navlinks a{font-family:'Jost';font-weight:400;font-size:14px;letter-spacing:.02em;color:var(--grafite);}
+  .navlinks a:hover{color:var(--tinta);}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:400;font-size:14px;letter-spacing:.02em;padding:12px 22px;border-radius:40px;transition:all .2s ease;cursor:pointer;border:1px solid transparent;}
+  .btn-wa{background:var(--tinta);color:var(--linho);}
+  .btn-wa:hover{background:#000;color:var(--linho);transform:translateY(-1px);}
+  .btn-wa svg{width:18px;height:18px;}
+  .btn-ghost{background:transparent;color:var(--tinta);border-color:var(--pedra);}
+  .btn-ghost:hover{border-color:var(--tinta);color:var(--tinta);}
+  @media(max-width:860px){.navlinks{display:none;}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:80px 0 90px;}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+  .hero h1{font-size:56px;font-weight:600;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--salvia-d);}
+  .hero .lead{margin:26px 0 0;max-width:520px;}
+  .hero .cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .hero .crm-tag{margin-top:30px;font-family:'Jost';font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--salvia-d);display:flex;align-items:center;gap:14px;}
+  .hero .crm-tag span{width:26px;height:1px;background:var(--pedra);display:inline-block;}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--areia);box-shadow:0 40px 80px -50px rgba(35,33,28,.6);}
+  .portrait .badge-mk{position:absolute;left:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:var(--linho);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -10px rgba(35,33,28,.5);z-index:2;}
+  @media(max-width:860px){.hero .grid{grid-template-columns:1fr;gap:40px;}.hero h1{font-size:40px;}}
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--tinta);color:var(--linho);}
+  .trust .row{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:34px 0;}
+  .trust .item{display:flex;flex-direction:column;gap:5px;}
+  .trust .item b{font-family:'Playfair Display',serif;font-weight:500;font-size:19px;color:var(--linho);}
+  .trust .item span{font-family:'Jost';font-weight:300;font-size:13.5px;color:var(--pedra);}
+  @media(max-width:720px){.trust .row{grid-template-columns:1fr;gap:18px;}}
+
+  /* ---------- Section base ---------- */
+  section.pad{padding:96px 0;}
+  .sec-head{max-width:680px;}
+  .sec-head h2{font-size:40px;margin-top:14px;}
+  .sec-head .lead{margin-top:20px;}
+
+  /* empathy */
+  .empathy{background:var(--areia);}
+  .empathy .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .empathy blockquote{margin:0;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:30px;line-height:1.35;color:var(--tinta);}
+  .empathy .chk{margin-top:24px;display:flex;flex-direction:column;gap:14px;}
+  .empathy .chk div{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--grafite);}
+  .empathy .chk .d{width:9px;height:9px;border-radius:50%;background:var(--salvia);margin-top:8px;flex:none;}
+  @media(max-width:820px){.empathy .grid{grid-template-columns:1fr;gap:34px;}.empathy blockquote{font-size:24px;}}
+
+  /* approach */
+  .appr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:54px;}
+  .card{background:var(--linho);border:1px solid var(--line);border-radius:10px;padding:34px 32px;}
+  .empathy .card,.approach .card{background:var(--linho);}
+  .card .n{font-family:'Jost';font-weight:400;font-size:13px;letter-spacing:.2em;color:var(--salvia-d);}
+  .card h3{font-size:23px;margin:12px 0 10px;}
+  .card p{font-size:15.5px;color:var(--grafite);}
+  @media(max-width:720px){.appr-grid{grid-template-columns:1fr;}}
+
+  /* percurso method */
+  .method{background:var(--tinta);color:var(--linho);}
+  .method h2{color:var(--linho);font-size:40px;}
+  .method .eyebrow{color:var(--pedra);}
+  .method .lead{color:var(--pedra);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px;}
+  .step{position:relative;padding-top:30px;}
+  .step .line{position:absolute;top:11px;left:0;right:0;height:1px;background:rgba(195,184,166,.28);}
+  .step .dot{position:absolute;top:5px;left:0;width:13px;height:13px;border-radius:50%;background:var(--salvia);}
+  .step .k{font-family:'Jost';font-weight:400;font-size:12px;letter-spacing:.2em;color:var(--salvia);}
+  .step h3{color:var(--linho);font-size:21px;margin:14px 0 10px;}
+  .step p{font-size:14.5px;color:var(--pedra);line-height:1.6;}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:34px 26px;}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr;}}
+
+  /* about */
+  .about .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;}
+  .about .p-wrap{position:relative;aspect-ratio:1/1.15;border-radius:8px;overflow:hidden;background:var(--areia);box-shadow:0 40px 80px -50px rgba(35,33,28,.55);}
+  .about h2{font-size:38px;}
+  .about .bio{margin-top:22px;display:flex;flex-direction:column;gap:16px;}
+  .about .bio p{font-size:16.5px;color:var(--grafite);line-height:1.75;}
+  .about .credentials{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;}
+  .about .credentials span{font-family:'Jost';font-weight:400;font-size:13px;color:var(--tinta);border:1px solid var(--pedra);border-radius:40px;padding:8px 18px;}
+  @media(max-width:820px){.about .grid{grid-template-columns:1fr;gap:40px;}}
+
+  /* principles */
+  .principles{background:var(--areia);}
+  .prin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;}
+  .prin{background:var(--linho);border-radius:10px;padding:32px 30px;border:1px solid var(--line);}
+  .prin .ic{width:44px;height:44px;border-radius:50%;background:var(--tinta);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .prin .ic .mk{color:var(--linho);}
+  .prin h3{font-size:20px;margin-bottom:9px;}
+  .prin p{font-size:15px;color:var(--grafite);}
+  @media(max-width:820px){.prin-grid{grid-template-columns:1fr;}}
+
+  /* faq */
+  .faq-list{margin-top:44px;border-top:1px solid var(--line);}
+  details{border-bottom:1px solid var(--line);}
+  details summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Playfair Display',serif;font-weight:500;font-size:20px;color:var(--tinta);}
+  details summary::-webkit-details-marker{display:none;}
+  details summary .plus{font-family:'Jost';font-weight:300;font-size:26px;color:var(--salvia-d);transition:transform .25s;flex:none;}
+  details[open] summary .plus{transform:rotate(45deg);}
+  details .ans{padding:0 40px 26px 0;font-size:16px;color:var(--grafite);line-height:1.75;max-width:760px;}
+
+  /* final cta */
+  .final{background:var(--tinta);color:var(--linho);text-align:center;}
+  .final h2{color:var(--linho);font-size:44px;max-width:720px;margin:0 auto;}
+  .final .lead{color:var(--pedra);max-width:560px;margin:22px auto 0;}
+  .final .cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .final .btn-wa{background:var(--linho);color:var(--tinta);}
+  .final .btn-wa:hover{background:#fff;}
+  .final .btn-ghost{border-color:rgba(195,184,166,.5);color:var(--linho);}
+  .final .btn-ghost:hover{border-color:var(--linho);}
+  .final .num{margin-top:26px;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--linho);}
+
+  /* footer */
+  footer{background:#1B1915;color:var(--pedra);padding:56px 0 30px;}
+  footer .top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start;}
+  footer .brand .bn{color:var(--linho);}
+  footer .fcol h4{font-family:'Jost';font-weight:400;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--salvia);margin:0 0 14px;}
+  footer .fcol a,footer .fcol p{display:block;font-size:14.5px;color:var(--pedra);margin-bottom:9px;}
+  footer .fcol a:hover{color:var(--linho);}
+  footer .disc{margin-top:44px;padding-top:24px;border-top:1px solid rgba(195,184,166,.16);font-size:12.5px;line-height:1.7;color:#8C8578;max-width:820px;}
+  footer .copy{margin-top:18px;font-size:12.5px;color:#726B5F;}
+
+  /* floating whatsapp */
+  .wa-float{position:fixed;right:26px;bottom:26px;z-index:60;display:flex;align-items:center;gap:0;background:var(--wa);color:#fff;border-radius:40px;padding:0;box-shadow:0 14px 34px -10px rgba(37,211,102,.6);overflow:hidden;transition:all .25s ease;}
+  .wa-float:hover{color:#fff;padding-right:22px;}
+  .wa-float .circle{width:60px;height:60px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .wa-float .circle svg{width:30px;height:30px;}
+  .wa-float .lbl{max-width:0;white-space:nowrap;overflow:hidden;font-family:'Jost';font-weight:400;font-size:14.5px;transition:max-width .25s ease,margin .25s ease;}
+  .wa-float:hover .lbl{max-width:200px;margin-right:4px;}
+  @media(max-width:600px){.wrap{padding:0 22px;}.hero h1{font-size:34px;}}
+</style>
+</head>
+<body>
+
+<!-- ===== WhatsApp glyph (reusable) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.83 9.83 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24.044 12.045.044 5.463.044.104 5.402.101 11.986c0 2.096.548 4.142 1.588 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.454h.005c6.581 0 11.941-5.359 11.944-11.945a11.9 11.9 0 0 0-3.48-8.464"/></symbol>
+  <symbol id="mk" viewBox="0 0 120 120"><path d="M32 90 C 57 73 53 50 88 32" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="90" r="6" fill="currentColor"/><circle cx="88" cy="32" r="9" fill="#83907F"/></symbol>
+</defs></svg>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="mk" width="40" height="40"><use href="#mk"/></svg>
+      <span class="bn">Dr. Pablo Luiz<small>Obesidade · Emagrecimento</small></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#abordagem">Abordagem</a>
+      <a href="#metodo">O percurso</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><use href="#wa"/></svg> Agendar avaliação
+    </a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap grid">
+    <div class="htext">
+      <div class="eyebrow">Medicina dedicada ao emagrecimento</div>
+      <h1>Obesidade é doença.<br>E tem <em>tratamento médico</em> sério.</h1>
+      <p class="lead">Sem julgamento e sem fórmula mágica. Um acompanhamento humano, com base científica, para quem já tentou de tudo e quer tratar a causa — não apenas o número na balança.</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><use href="#wa"/></svg> Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#abordagem">Conhecer a abordagem</a>
+      </div>
+      <div class="crm-tag"><span></span> Dr. Pablo Luiz · CRM MG 102327 · Atendimento 100% particular</div>
+    </div>
+    <div class="portrait">
+      <div class="badge-mk"><svg class="mk" width="30" height="30"><use href="#mk"/></svg></div>
+      <image-slot id="hero-portrait" shape="rect" fit="cover" placeholder="Foto profissional do Dr. Pablo Luiz"></image-slot>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust strip ===== -->
+<div class="trust on-dark">
+  <div class="wrap row">
+    <div class="item"><b>A causa, não o sintoma</b><span>Investigação metabólica individual de cada paciente.</span></div>
+    <div class="item"><b>Acolhimento real</b><span>Um espaço sem cobrança, sem vergonha e sem “antes e depois”.</span></div>
+    <div class="item"><b>Base científica</b><span>Conduta atualizada e baseada em evidência médica.</span></div>
+  </div>
+</div>
+
+<!-- ===== Empathy ===== -->
+<section class="pad empathy" id="para-voce">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Para quem é</div>
+      <blockquote>“Já tentei de tudo — e sempre voltei a engordar.”</blockquote>
+      <div class="chk">
+        <div><span class="d"></span> Você fez inúmeras dietas e o peso sempre retornou.</div>
+        <div><span class="d"></span> Sente frustração — e, às vezes, vergonha do próprio corpo.</div>
+        <div><span class="d"></span> Teme ser julgado ou receber mais uma receita genérica.</div>
+        <div><span class="d"></span> Quer alguém que entenda o seu caso e trate a raiz do problema.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="n">O compromisso aqui</div>
+      <h3>Aqui você é acolhido, não cobrado.</h3>
+      <p>O reganho de peso não é falta de força de vontade. É um corpo que se defende por mecanismos biológicos reais. Entender isso é o primeiro passo do tratamento — e o começo de um percurso possível, no seu ritmo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Approach ===== -->
+<section class="pad approach" id="abordagem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">A abordagem</div>
+      <h2>Uma outra forma de tratar o emagrecimento</h2>
+      <p class="lead">O foco não é perder peso a qualquer custo. É recuperar saúde, energia e equilíbrio — tratando o que faz o corpo reganhar peso, com um plano feito para a sua história.</p>
+    </div>
+    <div class="appr-grid">
+      <div class="card"><div class="n">01</div><h3>Investigar a causa metabólica</h3><p>Avaliação clínica cuidadosa para entender por que o peso retorna — hormônios, metabolismo, sono, rotina e histórico completo.</p></div>
+      <div class="card"><div class="n">02</div><h3>Plano individual, não protocolo</h3><p>Nada de dieta da moda. Uma conduta construída para o seu corpo e a sua realidade, com metas humanas e sustentáveis.</p></div>
+      <div class="card"><div class="n">03</div><h3>Acompanhamento contínuo</h3><p>Ajustes ao longo do caminho, com presença médica de verdade. O percurso é acompanhado — você não caminha sozinho.</p></div>
+      <div class="card"><div class="n">04</div><h3>Sem julgamento, sempre</h3><p>Um cuidado que respeita a sua trajetória e a sua dignidade. Sem balança como veredito, sem “antes e depois”.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Método / Percurso ===== -->
+<section class="pad method on-dark" id="metodo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O percurso</div>
+      <h2>Do ponto de partida ao recomeço</h2>
+      <p class="lead">Um caminho claro, conduzido passo a passo — cada etapa sobe em direção ao mesmo ponto: a sua saúde de volta.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="line"></div><div class="dot"></div><div class="k">ETAPA 01</div><h3>Primeira consulta</h3><p>Escuta atenta da sua história, sem pressa e sem cobrança. Aqui a jornada começa.</p></div>
+      <div class="step"><div class="line"></div><div class="dot"></div><div class="k">ETAPA 02</div><h3>Investigação</h3><p>Exames e avaliação para identificar a causa metabólica do reganho de peso.</p></div>
+      <div class="step"><div class="line"></div><div class="dot"></div><div class="k">ETAPA 03</div><h3>Plano de cuidado</h3><p>Um plano individual, com metas realistas e ajustadas ao seu ritmo de vida.</p></div>
+      <div class="step"><div class="line"></div><div class="dot"></div><div class="k">ETAPA 04</div><h3>Acompanhamento</h3><p>Revisões periódicas e ajustes contínuos — presença médica em todo o percurso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Sobre ===== -->
+<section class="pad about" id="sobre">
+  <div class="wrap grid">
+    <div class="p-wrap">
+      <image-slot id="about-portrait" shape="rect" fit="cover" placeholder="Retrato do Dr. Pablo Luiz"></image-slot>
+    </div>
+    <div>
+      <div class="eyebrow">Quem cuida de você</div>
+      <h2>Dr. Pablo Luiz</h2>
+      <div class="bio">
+        <p>Médico dedicado ao tratamento da obesidade e do emagrecimento, com atuação voltada à investigação das causas metabólicas do ganho e do reganho de peso.</p>
+        <p>Sua prática une autoridade médica e acolhimento genuíno: um cuidado próximo, que fala de igual para igual com o paciente e trata a pessoa por inteiro — não apenas um número. Atendimento 100% particular, com base científica e conduta atualizada.</p>
+      </div>
+      <div class="credentials">
+        <span>CRM MG 102327</span>
+        <span>Atendimento particular</span>
+        <span>Dedicação à obesidade e ao emagrecimento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Princípios ===== -->
+<section class="pad principles">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">O que você encontra aqui</div>
+      <h2>Cuidado com peso de medicina</h2>
+    </div>
+    <div class="prin-grid">
+      <div class="prin"><div class="ic"><svg class="mk" width="26" height="26"><use href="#mk"/></svg></div><h3>Ciência acessível</h3><p>Explicações claras sobre o que acontece no seu corpo — para você entender e participar do tratamento.</p></div>
+      <div class="prin"><div class="ic"><svg class="mk" width="26" height="26"><use href="#mk"/></svg></div><h3>Vínculo e presença</h3><p>Um médico que acompanha o seu percurso de perto, com tempo real de consulta e retornos consistentes.</p></div>
+      <div class="prin"><div class="ic"><svg class="mk" width="26" height="26"><use href="#mk"/></svg></div><h3>Transformação com leveza</h3><p>A ideia de recuperar energia e bem-estar — não a de sofrer para “emagrecer a qualquer custo”.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="pad" id="duvidas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Dúvidas frequentes</div>
+      <h2>Antes da sua primeira consulta</h2>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Preciso já ter tentado emagrecer antes? <span class="plus">+</span></summary><div class="ans">Não. O tratamento é para qualquer adulto que queira cuidar do peso de forma médica e sustentável — inclusive, e especialmente, para quem já tentou várias vezes e sente que o peso sempre volta.</div></details>
+      <details><summary>O acompanhamento promete quantos quilos vou perder? <span class="plus">+</span></summary><div class="ans">Não trabalhamos com promessas de resultado nem com metas de “kg perdidos” como veredito. O foco é tratar a causa, cuidar da sua saúde metabólica e construir um caminho possível e duradouro, respeitando o seu corpo e a sua história.</div></details>
+      <details><summary>O atendimento é particular? <span class="plus">+</span></summary><div class="ans">Sim, o atendimento é 100% particular. Isso permite consultas com tempo adequado, escuta atenta e um acompanhamento realmente individualizado. Fale no WhatsApp para conhecer as condições e agendar.</div></details>
+      <details><summary>Como funciona a primeira consulta? <span class="plus">+</span></summary><div class="ans">É uma conversa cuidadosa sobre a sua história, hábitos, rotina e tentativas anteriores, seguida de avaliação clínica. A partir daí, definimos os próximos passos da investigação e do plano de cuidado — no seu ritmo.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="pad final" id="contato">
+  <div class="wrap">
+    <h2>Seu recomeço pode começar por uma conversa.</h2>
+    <p class="lead">Dê o primeiro passo do seu percurso. Agende uma avaliação com o Dr. Pablo Luiz pelo WhatsApp — com acolhimento, do início ao fim.</p>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><use href="#wa"/></svg> Falar no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="https://instagram.com/pabloluiz_nutrologia" target="_blank" rel="noopener">Instagram @pabloluiz_nutrologia</a>
+    </div>
+    <div class="num">(86) 9 9957 5923</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="#top" style="align-items:flex-start">
+          <svg class="mk on-dark" width="42" height="42" style="color:var(--linho)"><use href="#mk"/></svg>
+          <span class="bn"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:var(--linho)">Dr. Pablo Luiz</span><small style="display:block;font-family:'Jost';font-weight:400;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--salvia);margin-top:3px">Obesidade · Emagrecimento</small></span>
+        </a>
+      </div>
+      <div class="fcol">
+        <h4>Navegar</h4>
+        <a href="#abordagem">Abordagem</a>
+        <a href="#metodo">O percurso</a>
+        <a href="#sobre">Sobre o médico</a>
+        <a href="#duvidas">Dúvidas frequentes</a>
+      </div>
+      <div class="fcol">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5586999575923" target="_blank" rel="noopener">WhatsApp · (86) 9 9957 5923</a>
+        <a href="https://instagram.com/pabloluiz_nutrologia" target="_blank" rel="noopener">Instagram · @pabloluiz_nutrologia</a>
+        <p>Atendimento 100% particular</p>
+      </div>
+    </div>
+    <p class="disc">Dr. Pablo Luiz — CRM MG 102327. Médico dedicado ao tratamento da obesidade e do emagrecimento. Este site tem caráter informativo e não substitui a consulta médica. Os resultados variam de pessoa para pessoa; não há garantia de resultado. Conteúdo em conformidade com as normas de publicidade médica do Conselho Federal de Medicina (Resolução CFM nº 1.974/2011).</p>
+    <p class="copy">© 2026 Dr. Pablo Luiz. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===== Floating WhatsApp ===== -->
+<a class="wa-float" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="circle"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></span>
+  <span class="lbl">Falar no WhatsApp</span>
+</a>
+
+</body>
+</html>
