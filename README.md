@@ -1,7 +1,7 @@
 # Site — Dr. Pablo Luiz
 
 Landing page do Dr. Pablo Luiz — medicina dedicada ao tratamento da obesidade e do emagrecimento.
-Site estático (HTML/CSS), sem build e sem dependências. Basta hospedar os arquivos.
+Site estático (HTML/CSS/JS), sem build e sem dependências. Basta hospedar os arquivos.
 
 ## Estrutura
 
@@ -13,19 +13,22 @@ site-dr-pablo-luiz/
 └── assets/
     ├── favicon.svg             # ícone da marca (aba do navegador)
     ├── og-image.png            # imagem de compartilhamento (WhatsApp, Instagram, Facebook)
-    ├── dr-pablo-hero.png       # PLACEHOLDER — troque pela foto do hero
-    └── dr-pablo-sobre.png      # PLACEHOLDER — troque pela foto da seção "Sobre"
+    └── dr-pablo.jpg            # foto do Dr. Pablo (hero + seção "Sobre")
 ```
 
-## Antes de publicar — 3 passos
+## O que já está pronto
 
-1. **Fotos:** substitua `assets/dr-pablo-hero.png` e `assets/dr-pablo-sobre.png` pelo ensaio
-   profissional do Dr. Pablo (mantenha os mesmos nomes de arquivo, ou atualize os `src` no `index.html`).
-   Sugestão de proporção: hero ~4:5 (retrato), Sobre ~1:1,15.
-2. **Domínio na imagem de compartilhamento:** no `index.html`, troque `https://SEU-DOMINIO.vercel.app`
+- **Paleta verde-escura + dourado** (fundo escuro, conforme solicitado).
+- **Foto real** do Dr. Pablo aplicada no hero e na seção "Sobre".
+- **Calculadora de IMC** interativa (faixas de referência da OMS) com CTA para o WhatsApp.
+- **WhatsApp** (86) 9 9957 5923 no header, botão flutuante e CTA final.
+- **Instagram** @pabloluiz_nutrologia.
+
+## Antes de publicar — 2 passos
+
+1. **Domínio na imagem de compartilhamento:** no `index.html`, troque `https://SEU-DOMINIO.vercel.app`
    nas tags `og:image` / `twitter:image` pelo domínio real depois do deploy.
-3. **Conferir contato:** o WhatsApp já aponta para **(86) 9 9957 5923** (`wa.me/5586999575923`)
-   e o Instagram para **@pabloluiz_nutrologia**.
+2. **Foto (opcional):** para trocar a foto, substitua `assets/dr-pablo.jpg` mantendo o mesmo nome.
 
 ## Publicar no GitHub
 
@@ -43,7 +46,7 @@ git push -u origin main
 
 1. Acesse **vercel.com** e faça login com a conta do GitHub.
 2. **Add New → Project** e selecione o repositório `site-dr-pablo-luiz`.
-3. Framework Preset: **Other** (é site estático). Build Command e Output vazios — a Vercel serve os arquivos como estão.
+3. Framework Preset: **Other** (site estático). Build Command e Output vazios — a Vercel serve os arquivos como estão.
 4. Clique em **Deploy**. Em segundos o site estará no ar em `https://site-dr-pablo-luiz.vercel.app`.
 5. Para domínio próprio: **Settings → Domains** e aponte o seu domínio.
 
@@ -53,4 +56,5 @@ Cada `git push` na branch `main` publica a nova versão automaticamente.
 
 Nome completo + CRM MG 102327 sempre visíveis. Sem superlativos, sem promessa de resultado, sem
 antes/depois. Atuação descrita como "médico dedicado ao tratamento da obesidade e do emagrecimento".
+A calculadora de IMC traz aviso explícito de que é orientação inicial e não substitui a consulta médica.
 Base: Resolução CFM nº 1.974/2011.
