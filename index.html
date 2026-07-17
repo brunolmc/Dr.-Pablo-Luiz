@@ -40,7 +40,9 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--escuro);color:var(--branco);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;}
+  body{margin:0;background:var(--escuro);color:var(--branco);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;}
+  html{overflow-x:hidden;}
+  img,svg{max-width:100%;}
   a{color:var(--dourado);text-decoration:none;}
   a:hover{color:var(--dourado-l);}
   h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;color:var(--branco);margin:0;line-height:1.08;letter-spacing:-.01em;}
@@ -72,6 +74,10 @@
   .btn-wa{background:var(--dourado);color:var(--escuro);}
   .btn-wa:hover{background:var(--dourado-l);color:var(--escuro);transform:translateY(-1px);}
   .btn-wa svg{width:18px;height:18px;}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .ig-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:var(--branco);border:1px solid rgba(247,247,245,.28);transition:all .2s ease;flex:none;}
+  .ig-btn svg{width:20px;height:20px;}
+  .ig-btn:hover{color:var(--escuro);background:var(--dourado);border-color:var(--dourado);transform:translateY(-1px);}
   .btn-ghost{background:transparent;color:var(--branco);border-color:rgba(247,247,245,.4);}
   .btn-ghost:hover{border-color:var(--dourado);color:var(--dourado);}
   .light .btn-ghost{color:var(--escuro);border-color:var(--marrom);}
@@ -213,6 +219,8 @@
   footer .fcol a,footer .fcol p{display:block;font-size:14.5px;color:rgba(247,247,245,.6);margin-bottom:9px;}
   footer .fcol a:hover{color:var(--branco);}
   footer .disc{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-dark);font-size:12.5px;line-height:1.7;color:rgba(247,247,245,.42);max-width:820px;}
+  footer .disc a{color:rgba(247,247,245,.6);text-decoration:underline;}
+  footer .disc a:hover{color:var(--branco);}
   footer .copy{margin-top:18px;font-size:12.5px;color:rgba(247,247,245,.32);}
 
   /* floating whatsapp */
@@ -242,6 +250,7 @@
     .hero{padding:52px 0 60px;}
     .hero h1{font-size:30px;}
     .wa-float .circle{width:54px;height:54px;}
+    footer{padding-bottom:104px;}
   }
 </style>
 </head>
@@ -251,6 +260,7 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.83 9.83 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24.044 12.045.044 5.463.044.104 5.402.101 11.986c0 2.096.548 4.142 1.588 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.454h.005c6.581 0 11.941-5.359 11.944-11.945a11.9 11.9 0 0 0-3.48-8.464"/></symbol>
   <symbol id="mk" viewBox="0 0 120 120"><path d="M32 90 C 57 73 53 50 88 32" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="90" r="6" fill="currentColor"/><circle cx="88" cy="32" r="9" fill="#C8A060"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" d="M7 2.2h10A4.8 4.8 0 0 1 21.8 7v10A4.8 4.8 0 0 1 17 21.8H7A4.8 4.8 0 0 1 2.2 17V7A4.8 4.8 0 0 1 7 2.2Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
 </defs></svg>
 
 <!-- ===== Header ===== -->
@@ -267,9 +277,14 @@
       <a href="#sobre">Sobre</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn-wa" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><use href="#wa"/></svg> <span class="lbl-txt">Agendar avaliação</span>
-    </a>
+    <div class="nav-cta">
+      <a class="ig-btn" href="https://instagram.com/pabloluiz_nutrologia" target="_blank" rel="noopener" aria-label="Instagram do Dr. Pablo Luiz (@pabloluiz_nutrologia)" title="@pabloluiz_nutrologia">
+        <svg viewBox="0 0 24 24"><use href="#ig"/></svg>
+      </a>
+      <a class="btn btn-wa" href="https://wa.me/5586999575923?text=Ol%C3%A1%2C%20Dr.%20Pablo%20Luiz.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><use href="#wa"/></svg> <span class="lbl-txt">Agendar avaliação</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -482,7 +497,8 @@
         <a href="https://instagram.com/pabloluiz_nutrologia" target="_blank" rel="noopener">Instagram · @pabloluiz_nutrologia</a>
       </div>
     </div>
-    <p class="disc">Dr. Pablo Luiz. CRM MG 102327. Médico dedicado ao tratamento da obesidade e do emagrecimento. Este site tem caráter informativo e não substitui a consulta médica. Os resultados variam de pessoa para pessoa; não há garantia de resultado. Conteúdo em conformidade com as normas de publicidade médica do Conselho Federal de Medicina (Resolução CFM nº 1.974/2011).</p>
+    <p class="disc">Dr. Pablo Luiz. CRM MG 102327. Médico dedicado ao tratamento da obesidade e do emagrecimento. Este site tem caráter informativo e não substitui a consulta médica. Os resultados variam de pessoa para pessoa; não há garantia de resultado. Conteúdo em conformidade com as normas de publicidade médica do Conselho Federal de Medicina (Resolução CFM nº 2.336/2023).</p>
+    <p class="disc" style="margin-top:18px"><b style="color:rgba(247,247,245,.6);font-weight:500">Privacidade (LGPD).</b> Os dados de peso e altura informados na calculadora de IMC são processados apenas no seu navegador, para exibir o resultado, e não são armazenados nem enviados a nós. Ao entrar em contato pelo WhatsApp, você compartilha seus dados apenas para que possamos responder e agendar seu atendimento; eles não são usados para outras finalidades sem o seu consentimento, conforme a Lei nº 13.709/2018 (LGPD). Para dúvidas ou solicitações sobre seus dados, fale conosco pelo <a href="https://wa.me/5586999575923" target="_blank" rel="noopener">WhatsApp</a>.</p>
     <p class="copy">© 2026 Dr. Pablo Luiz. Todos os direitos reservados.</p>
   </div>
 </footer>
