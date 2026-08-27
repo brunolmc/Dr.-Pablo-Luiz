@@ -68,7 +68,7 @@
   .brand .bn{font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:var(--branco);}
   .brand .bn small{display:block;font-family:'Jost';font-weight:400;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);margin-top:1px;}
   .navlinks{display:flex;gap:34px;}
-  .navlinks a{font-family:'Jost';font-weight:400;font-size:14px;letter-spacing:.02em;color:var(--sobre-escuro-2);}
+  .navlinks a{font-family:'Jost';font-weight:400;font-size:14px;letter-spacing:.02em;white-space:nowrap;color:var(--sobre-escuro-2);}
   .navlinks a:hover{color:var(--dourado);}
   .btn{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;font-family:'Jost';font-weight:400;font-size:14px;letter-spacing:.02em;padding:12px 22px;border-radius:40px;transition:all .2s ease;cursor:pointer;border:1px solid transparent;}
   .btn-wa{background:var(--dourado);color:var(--escuro);}
@@ -82,6 +82,7 @@
   .btn-ghost:hover{border-color:var(--dourado);color:var(--dourado);}
   .light .btn-ghost{color:var(--escuro);border-color:var(--marrom);}
   .light .btn-ghost:hover{border-color:var(--escuro);color:var(--escuro);}
+  @media(max-width:1000px){.navlinks{gap:22px;}}
   @media(max-width:860px){.navlinks{display:none;}}
 
   /* ---------- Hero ---------- */
@@ -306,7 +307,7 @@
     </div>
     <div class="portrait">
       <div class="badge-mk"><svg class="mk" width="30" height="30"><use href="#mk"/></svg></div>
-      <img src="assets/dr-pablo-hero.jpg?v=6" alt="Dr. Pablo Luiz, médico dedicado ao tratamento da obesidade e do emagrecimento">
+      <img src="assets/dr-pablo-hero.jpg?v=7" alt="Dr. Pablo Luiz, médico dedicado ao tratamento da obesidade e do emagrecimento">
     </div>
   </div>
 </section>
@@ -315,7 +316,7 @@
 <div class="trust">
   <div class="wrap row">
     <div class="item"><b>Emagrecimento com ciência</b><span>Cuidado individualizado e investigação metabólica de cada paciente.</span></div>
-    <div class="item"><b>Acolhimento real</b><span>Um espaço sem cobrança, sem vergonha e sem “antes e depois”.</span></div>
+    <div class="item"><b>Acolhimento real</b><span>Um espaço sem cobrança.</span></div>
     <div class="item"><b>Base científica</b><span>Conduta atualizada e baseada em evidência médica.</span></div>
   </div>
 </div>
@@ -353,7 +354,7 @@
       <div class="card"><div class="n">01</div><h3>Investigar a causa metabólica</h3><p>Avaliação clínica cuidadosa para entender por que o peso retorna: hormônios, metabolismo, sono, rotina e histórico completo.</p></div>
       <div class="card"><div class="n">02</div><h3>Plano individual, não protocolo</h3><p>Nada de dieta da moda. Uma conduta construída para o seu corpo e a sua realidade, com metas humanas e sustentáveis.</p></div>
       <div class="card"><div class="n">03</div><h3>Acompanhamento contínuo</h3><p>Ajustes ao longo do caminho, com presença médica de verdade. O percurso é acompanhado. Você não caminha sozinho.</p></div>
-      <div class="card"><div class="n">04</div><h3>Sem julgamento, sempre</h3><p>Um cuidado que respeita a sua trajetória e a sua dignidade. Sem balança como veredito, sem “antes e depois”.</p></div>
+      <div class="card"><div class="n">04</div><h3>Sem julgamento, sempre</h3><p>Um cuidado que respeita a sua trajetória e a sua dignidade.</p></div>
     </div>
   </div>
 </section>
@@ -411,11 +412,11 @@
       <img src="assets/dr-pablo-sobre.jpg?v=6" alt="Retrato do Dr. Pablo Luiz">
     </div>
     <div>
-      <div class="eyebrow">Quem é o Dr. Pablo Luiz</div>
+      <div class="eyebrow">Quem é o Dr. Pablo Luiz?</div>
       <h2>Dr. Pablo Luiz</h2>
       <div class="bio">
-        <p>Médico dedicado ao tratamento da obesidade e do emagrecimento, com atuação voltada à investigação das causas metabólicas do ganho e do reganho de peso.</p>
-        <p>Sua prática une autoridade médica e acolhimento genuíno: um cuidado próximo, que fala de igual para igual com o paciente e trata a pessoa por inteiro, não apenas um número. Conduta atualizada, com base científica e tempo real de escuta.</p>
+        <p>Cirurgião geral desde 2017, segue atuando na cirurgia e encontrou na nutrologia um novo propósito: prevenir antes de tratar.</p>
+        <p>Hoje, além da prática cirúrgica, dedica-se ao cuidado integral de pacientes com obesidade e ao emagrecimento com ciência e cuidado.</p>
       </div>
       <div class="credentials">
         <span>CRM MG 102327</span>
