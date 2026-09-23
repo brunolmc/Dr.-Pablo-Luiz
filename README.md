@@ -21,7 +21,7 @@ site-dr-pablo-luiz/
 - **Paleta verde-escura + dourado** (fundo escuro, conforme solicitado).
 - **Foto real** do Dr. Pablo aplicada no hero e na seção "Sobre".
 - **Calculadora de IMC** interativa (faixas de referência da OMS) com CTA para o WhatsApp.
-- **WhatsApp** (86) 9 9957 5923 no header, botão flutuante e CTA final.
+- **WhatsApp** (31) 9005-6222 no header, botão flutuante e CTA final.
 - **Instagram** @pabloluiz_nutrologia.
 
 ## Antes de publicar — 2 passos
